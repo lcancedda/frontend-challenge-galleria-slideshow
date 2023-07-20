@@ -1,0 +1,45 @@
+@use '/src/variables';
+.nav {
+	@include variables.flex-row;
+	height: 5.75rem;
+	width: 100%;
+	padding: 40px 0px;
+}
+.logo {
+	height: 32px;
+	width: 113px;
+	margin: 0 1em;
+}
+button {
+	height: 11px;
+	width: 175px;
+	margin-right: 0;
+	font-size: 0.75em;
+
+	&:hover {
+		color: variables.$black-hole;
+	}
+}
+hr {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: 1px solid variables.$cold-morning;
+}
+@media screen and (min-width: 768px) {
+	.nav {
+	height: 6.25rem;
+	padding: 0 2rem;
+	}
+}
+@media screen and (min-width: 1440px) {
+	.nav {
+	height: 9rem;
+	padding: 0 2.75rem;
+	}
+	.logo {
+	height: 3.5rem;
+	width: 12rem;
+	}
+}
+

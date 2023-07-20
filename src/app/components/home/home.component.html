@@ -1,0 +1,11 @@
+<div class="content">
+   <ul class="mdc-image-list mdc-image-list--masonry my-masonry-image-list">
+      <li class="mdc-image-list__item" 
+          *ngFor="let artwork of artworks; let i = index" 
+          (click)="onClick(true)"
+          [routerLink]="['/slide', i]">
+         <app-thumbnail [artwork]="artwork"></app-thumbnail>
+      </li>
+   </ul>
+</div>
+

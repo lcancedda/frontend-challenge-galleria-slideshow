@@ -1,0 +1,16 @@
+<div class="nav">
+    <div class="logo">
+        <img src="../../../assets/images/logo.svg" [routerLink]="''" alt="galleria-logo" class="logo">
+    </div>
+    <section class="start">
+        <div>
+            <button *ngIf="!slideshowOn" (click)="onClickSlideshow(true)" type="button" class="start">
+                Start slideshow
+            </button>
+            <button *ngIf="slideshowOn" (click)="onClickSlideshow(false)" type="button" class="start">
+                Stop slideshow
+            </button>
+        </div>
+    </section>
+</div>
+<hr>

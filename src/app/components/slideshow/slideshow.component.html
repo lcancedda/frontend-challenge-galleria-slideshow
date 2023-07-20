@@ -1,0 +1,61 @@
+<div class="main">
+    <div class="container">
+
+        <div class="hero">
+            <img class="mobile" src="{{artwork.images.hero.small}}" alt="{{artwork.name}}">
+            <img class="desktop" src="{{artwork.images.hero.large}}" alt="{{artwork.name}}">
+            <button class="expand" (click)="openModal()">
+                <img src="../../../assets/icons/icon-view-image.svg" alt="">
+                View Image
+            </button>
+
+            <div class="info">
+                <div class="title">
+                    <h2>{{this.artwork.name}}</h2>
+                    <h3>{{this.artwork.artist.name}}</h3>
+                </div>
+                <img class="artist-thumbnail" src="{{this.artwork.artist.image}}" alt="{{this.artwork.artist.name}}">
+            </div>
+        </div>
+
+        <div class="description">
+            <h4 class="year">{{this.artwork.year}}</h4>
+            <div class="text">
+                <p>{{this.artwork.description}}</p>
+                <a class="source" href="{{this.artwork.source}}" target="_blank">Go to Source</a>
+            </div>
+        </div>
+    </div>
+
+    <footer style="margin-top: 0.75em">
+        <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+        <section class="bottom-nav">
+            <div class="nav-row">
+                <div class="title-info">
+                    <h5>{{artwork.name}}</h5>
+                    <h6>{{artwork.artist.name}}</h6>
+                </div>
+                <div class="nav">
+                    <button (click)="onPrevious()" [disabled]="artworkIndex == 0">
+                        <svg width="26" height="26" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="" fill="none" fill-rule="evenodd">
+                                <path d="M24.166 1.843L3.627 12.113l20.539 10.269V1.843z" stroke-width="2" />
+                                <path fill="" d="M.986.5h-1v22.775h1z" />
+                            </g>
+                        </svg>
+                    </button>
+
+                    <button (click)="onNext()" [disabled]="artworkIndex == 14">
+                        <svg width="26" height="26" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="" fill="none" fill-rule="evenodd">
+                                <path d="M1.528 1.843l20.538 10.27L1.528 22.382V1.843z" stroke-width="2" />
+                                <path fill="" d="M24.708.5h1v22.775h-1z" />
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+        </section>
+    </footer>
+</div>
